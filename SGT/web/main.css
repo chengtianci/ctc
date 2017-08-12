@@ -1,0 +1,108 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	color: #666666;
+	text-decoration: none;
+}
+a:visited {
+	color: #ff8888;
+	text-decoration: none;
+}
+a:hover {
+	color: black;
+	text-decoration: none;
+	background: #eee;
+	display: block;
+}
+a:active {
+	text-decoration: none;
+}
+ul li{
+	font-size:15px;
+	margin:0;
+	display: block;
+	width: 120px;
+	height: 75px;
+	text-align:center;
+	line-height: 80px;
+}
+.subtitle{
+	width: 120px;
+	height: 800px;
+	background: white;
+	float: left;
+	opacity: 0.6;
+}
+#cont{
+
+}
+#home{
+	height: 800px;
+	background-image: url(../imgs/headbac.jpg);
+	background-position: 0px -200px;
+	background-size: cover;
+}
+#head{
+	height: 800px;
+	width: 120px;
+	background:white;
+	opacity: 0.7;
+	float: left;
+}
+#SGT{
+	float: right;
+	opacity: 0.5;
+}
+
+#loki{
+	height: 800px;
+	background-image: url(../imgs/loki.jpg);
+	background-position: 0px -100px;
+	background-size: cover;
+}
+#xiaohan{
+	height: 800px;
+	background-image: url(../imgs/xiaohan.jpg);
+	background-position: 0px -100px;
+	background-size: cover;
+}
+#shitou{
+	height: 800px;
+	background-image: url(../imgs/shitou.jpg);
+	background-position: 0px -150px;
+	background-size: cover;
+}
+#tong{
+	height: 800px;
+	background-image: url(../imgs/tongtong.jpg);
+	background-position: 0px -100px;
+	background-size: cover;
+}
+#richang{
+	height: 800px;
+	background-image: url(../imgs/pingban.jpg);
+	background-position: 0px -280px;
+}
+#lianxi{
+	height: 800px;
+	background-image: url(../imgs/sgt.jpg);
+	background-position: 0px -255px;
+	background-size: cover;
+}
+#footer{
+	height: 20px;
+	text-align:center;
+	background: white;
+}
+#footer a{
+	height:37px;
+	line-height: 37；
+	font-size:17px;
+}
+#footer a:hover{
+	background-image: none;
+	color:black;
+	display: inline;
+}

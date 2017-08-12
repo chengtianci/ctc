@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>var 作用域的问题</title>
+	<script type="text/javascript" src="../jquery.min.js"></script>
+	<script type="text/javascript" src="./var.js"></script>
+</head>
+<body>
+	<h1>问题在哪？</h1>
+	<h4>要先去理解settimeout的作用原理</h4>
+	<h4>再看console控制板</h4>
+	<p>settimeout定时启动，1500ms\3000ms\4500ms之后i已经变成3，自然找不到messages[3](因为undefined)<br>
+		settimeout启动的时候，不是早先的i而是再次读取i的值，并没有在第一次settimeout的时候将i备份，是等到要执行的时候再来取i <br>
+		setTimeout的作用机理是判断队列中的进程，js单线程的解释器，当队列中有任务时则等待时间在将function的代码执行的，若没有任务则func直接执行了
+	</p>
+</body>
+</html>

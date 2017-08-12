@@ -1,0 +1,131 @@
+#header{
+    position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1030;	
+	width: 100%;
+	border-radius: 0;background: white;
+	text-decoration: none;
+	outline: none;
+
+}
+.cont{
+	margin: 0 auto;
+	width: 1000px;
+}
+#header .cont div{
+	float:right;
+	width: 140px;
+	height: 78px;
+}
+#header .cont div a{
+	font-size: 15px;
+	line-height: 78px;
+}
+#download{
+	width: 100%;
+	background:#008bed;
+	height: 450px;
+	margin-top: 100px;
+}
+#downl{
+	width:500px;
+	float:left;
+	height: 450px;
+}
+#downr{
+	position: relative;
+	left: 60px;
+	top: 50px;
+}
+.downr-ul{
+	float: left;
+	margin:30px 40px;
+	border-radius: 5px;
+}
+.downr-ul ul li{
+	line-height: 50px;
+	font-size: 18px;
+	display: block;
+	height: 50px;
+	width: 135px;
+	background:white;
+	margin: 17px 0;
+	border-radius: 5px;
+}
+#ios{
+	height: 50px;
+	width: 50px;
+	display: block;
+	background-image: url(./imgs/iphone_logo.png);
+		float: left;
+}
+#andriod{
+	height: 50px;
+	width: 50px;
+	display: block;
+	background-image:  url(./imgs/android_logo.png);
+		float: left;
+}
+#main{
+	width:100%;
+
+	background: white;
+}
+#section-head{
+ 
+	height: 100px;
+}
+#section-head div{
+	line-height: 100px;
+	font-size: 27px;
+}
+#read-more{
+	background:white;
+}
+.row{
+   width:1000px;
+}
+.col{
+width:330px;
+float: left;
+}
+.wrap{
+height: 400px;
+width: 330px;
+}
+.box{
+padding: 20px;
+}
+.box img{
+ width:auto;
+ height:auto;
+ max-width:100%;
+ max-height:100%;
+
+}
+#a-more{
+	font-size: 20px;
+color: #15527b;
+background: #e8eef2;
+border-radius: 3px;
+display: block;
+text-align: center;
+height: 62px;
+width:1000px;
+line-height: 62px;
+margin: 30px auto 0 auto;
+text-decoration: none;
+outline: none;
+clear: both;
+margin-bottom: 20px;
+}
+#footer{
+	margin: 500px 0 0 0;
+	width: 100%;
+    color:#666;
+}
+#footer .cont div{
+	float: right;
+	margin-left: 30px;
+}
