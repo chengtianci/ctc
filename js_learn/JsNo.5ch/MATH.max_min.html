@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math</title>
+</head>
+<body>
+	<h1>关于Math.max(),Math.min()在只比较两个值的时候于三目运算符元算速度的快慢||探究unshift的推入顺序</h1>
+	<script type="text/javascript">
+		var num1 = 0;
+		var num2 = 1;
+		console.time("time");
+		num1 >num2 ? num1 : num2;
+		console.timeEnd("time");
+		console.time("Max");
+		Math.max(num1,num2);
+		console.timeEnd("Max");
+		console.time("Min");
+		Math.min(num1,num2);
+		console.timeEnd("Min");
+
+
+		//unshift的推入顺序
+		var a = ["1","2","3"];
+		var b = a.unshift("4","5");//先推入5，在推入4
+		console.log(a);//["4", "5", "1", "2", "3"]
+		console.log(b);//unshift()的返回值是Array.length
+		a.unshift(4);
+		a.unshift(5);
+		console.log(a);//[5, 4, "4", "5", "1", "2", "3"]
+	</script>
+</body>
+</html>
