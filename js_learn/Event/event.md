@@ -82,6 +82,7 @@
 	type ： 只读 事件类型
 
 #事件类型
+
 ##UI事件
 	~
 	load : 当页面完全加载后在window上触发，
@@ -91,3 +92,61 @@
 	unload ： 与load相反在卸载的时候触发
 	error ： js错误，加载img失败，加载<object>失败
 	select :选择文本框时
+	resize : 窗口大小改变或者框架大小变化在window触发
+	scroll： 用户在带滚动条的元素上滚动时在该元素上触发
+###load
+	1.EventUtil.addHandler(window,"load",function() {
+		alert("loaded!");
+		})
+	2.在元素中添加onload属性
+		<!DOCTYPE html>
+		<html>
+			<head>
+				<title>eg</title>
+			</head>
+			<body onload="fun()">
+				<script type="text/javascript">
+				funtion fun(){
+					alert("load!")
+				}
+				</script>
+			</body>
+		</html>
+
+	3.也能添加到img
+	EventUtil.addHandler(window,"load",function() {
+			var image = document.createElement("img");
+			Event.addHandler(image,"load",function(event) {
+				event = EventUtil.getEvent(event);
+				target = EventUtil.getTarget(event);
+				alert(target.src);
+				})
+				document.body.appendChild(image);
+				image.src = "......";
+		})
+	确保页面已经加载完毕，再添加新的元素，确保src已经加载，在append
+###unload 
+	加载的两种方式与load相同
+###resize 
+	加载的两种方式与load相同，在window上触发所以第二种方式
+	<body ></body>在body上
+	在缩放变化的时候会重复触发
+###scroll
+	在滚动元素上触发，会重复触发-在文档不停滚动的时候
+	可以来检测scrollLeft和scrollTop来检测变化
+	
+##焦点事件
+###blur : 
+	在元素失去焦点的时候触发，不会冒泡，所有浏览器都支持
+###FocusIn ：
+	在元素获得焦点的时候触发，冒泡，只有Opera，DOM3废弃了这个，选择了focusin
+###FocusOut ：
+	在元素失去焦点的时候触发，冒泡，只有Opera，DOM3废弃了这个，选择了focusout
+###focus ： 
+	元素获得焦点触发，不冒泡，所有都支持
+###focusin ：
+	在元素获得焦点的时候触发，与HTML事件focus等价，冒泡，IE 5.5+ / Safari 5.1+ / Opera / Chrome
+###focusout
+	在元素失去焦点的时候触发，HTML事件blur通用版，IE 5.5+ / Safari 5.1+ / Opera / Chrome
+
+##鼠标与滚轮事件
